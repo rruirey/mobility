@@ -1,5 +1,5 @@
 [submodule "mobility-frontend"]
-	path = mobility-front
+	path = mobility-frontend
 	url = https://github.com/rruirey/mobility-frontend
 [submodule "mobility-backend"]
 	path = mobility-backend
