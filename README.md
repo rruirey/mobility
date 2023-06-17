@@ -3,28 +3,27 @@
     <img src="https://i.imgur.com/6sJmkcX.png">
 </p>
 
-
-**Mobility** es una **Aplicación Móvil** multiplataforma diseñada con el propósito de abordar de manera **eficiente** y **efectiva** la complejidad que implica administrar y organizar todo contenido fotográfico generado durante un viaje. 
-
+**Mobility** es una **Aplicación Móvil** multiplataforma diseñada con el propósito de abordar de manera **eficiente** y **efectiva** la complejidad que implica administrar y organizar todo contenido fotográfico generado durante un viaje.
 
 ## Indice
 
- - [Introducción](#introducción)
- - [Requisitos](#requisitos)
- - [Arquitectura](#arquitectura)
- - [Diseño](#diseño)
- - [Puesta en producción](#puesta-en-producción)
- - [Conclusiones](#diseño)
+- [Introducción](#introducción)
+- [Requisitos](#requisitos)
+- [Arquitectura](#arquitectura)
+- [Diseño](#diseño)
+- [Puesta en producción](#puesta-en-producción)
+- [Conclusiones](#conclusiones)
 
 ## Introducción
 
 Mobility es una **aplicación móvil multiplataforma** diseñada para **simplificar** y **optimizar** la gestión del contenido fotográfico generado durante los viajes. Su objetivo principal es unificar todo el material visual en un mismo sitio, facilitando así la labor de profesores y gestores al descargar y publicar ese contenido en diversas plataformas.
 
-En el ámbito educativo, Mobility se convierte en una herramienta **invaluable** para los profesores. Les permite recopilar de manera eficiente las fotografías capturados por los estudiantes durante un viaje de estudio. Los profesores pueden invitar a los estudiantes a cargar su contenido en la aplicación, creando así un repositorio centralizado de imágenes. Esto facilita a los profesores el acceso y la revisión del material, permitiéndoles utilizarlo en actividades educativas, presentaciones o proyectos. 
+En el ámbito educativo, Mobility se convierte en una herramienta **invaluable** para los profesores. Les permite recopilar de manera eficiente las fotografías capturados por los estudiantes durante un viaje de estudio. Los profesores pueden invitar a los estudiantes a cargar su contenido en la aplicación, creando así un repositorio centralizado de imágenes. Esto facilita a los profesores el acceso y la revisión del material, permitiéndoles utilizarlo en actividades educativas, presentaciones o proyectos.
 
 Por otro lado, Mobility también beneficia a los gestores de viajes al simplificar la tarea de recopilar y organizar el contenido visual generado durante los viajes grupales. La aplicación permite a los gestores descargar rápidamente todas las fotografías y videos capturados por los participantes y utilizarlos para crear una narrativa visual del viaje. Además, Mobility ofrece la capacidad de compartir fácilmente este contenido en redes sociales, páginas web institucionales u otros canales de comunicación relevantes, lo que ayuda a promover la experiencia del viaje y aumentar la visibilidad de la institución.
 
 ## Requisitos
+
 ### Requisitos Funcionales
 
 - Los usuarios deben de poder iniciar sesión y registrarse.
@@ -37,33 +36,31 @@ Por otro lado, Mobility también beneficia a los gestores de viajes al simplific
 - Los gestores deben poder organizar viajes y crear su respectivo código de enlace para invitar a alumnos.
 - Los gestores deben de tener acceso a un endpoint especifico que devuelve todos los datos del contenido de un viaje.
 
-
 ### Requisitos No Funcionales
 
-* **Rendimiento**: La aplicación debe cargar y procesar las imágenes de manera rápida y eficiente.
-* **Seguridad**: Se deben implementar medidas de seguridad para proteger la privacidad del contenido visual.
-* **Usabilidad**: La interfaz de usuario debe ser intuitiva y fácil de usar, incluso para usuarios sin experiencia técnica.
-* **Compatibilidad**: La aplicación debe ser compatible con diferentes plataformas móviles y versiones del sistema operativo.
-* **Escalabilidad**: La aplicación debe ser capaz de manejar un volumen creciente de contenido fotográfico a medida que más usuarios la utilicen.
+- **Rendimiento**: La aplicación debe cargar y procesar las imágenes de manera rápida y eficiente.
+- **Seguridad**: Se deben implementar medidas de seguridad para proteger la privacidad del contenido visual.
+- **Usabilidad**: La interfaz de usuario debe ser intuitiva y fácil de usar, incluso para usuarios sin experiencia técnica.
+- **Compatibilidad**: La aplicación debe ser compatible con diferentes plataformas móviles y versiones del sistema operativo.
+- **Escalabilidad**: La aplicación debe ser capaz de manejar un volumen creciente de contenido fotográfico a medida que más usuarios la utilicen.
+
 ## Arquitectura
 
 Mobility es una aplicación móvil desarrollada en **React Native**, que utiliza un backend construido en **NestJs**, siguiendo una arquitectura hexagonal. Esta elección de tecnologías y arquitectura tiene como objetivo principal facilitar la escalabilidad de la aplicación.
 
 ### Base de datos
 
-La base de datos elegida para Mobility es **MongoDB**, una opción NoSQL que simplifica el manejo de modelos gracias a sus API específicas para cada lenguaje de programación. MongoDB almacena los datos en documentos flexibles en formato JSON, lo que permite una representación natural y coherente de la información. 
+La base de datos elegida para Mobility es **MongoDB**, una opción NoSQL que simplifica el manejo de modelos gracias a sus API específicas para cada lenguaje de programación. MongoDB almacena los datos en documentos flexibles en formato JSON, lo que permite una representación natural y coherente de la información.
 
 Esta elección de base de datos simplifica el desarrollo y brinda flexibilidad para adaptarse a cambios en los modelos de datos y requerimientos de Mobility.
 
 ### React Native
 
-React Native es un poderoso marco de desarrollo que permite crear aplicaciones móviles multiplataforma con una única base de código. Al utilizar React Native, los desarrolladores pueden escribir una vez y ejecutar en múltiples plataformas, como iOS y Android. Esta capacidad de reutilización de código es fundamental, ya que evita la necesidad de desarrollar y mantener dos versiones separadas de la aplicación para cada plataforma.
+React Native es un framework que permite crear aplicaciones móviles multiplataforma utilizando una única base de código. Con React Native, los desarrolladores pueden escribir una vez y ejecutar en múltiples plataformas como iOS y Android. Esta reutilización de código es muy importante porque evita la necesidad de desarrollar y mantener dos versiones separadas de la aplicación para cada plataforma.
 
-La ventaja de esta enfoque radica en la eficiencia del proceso de desarrollo. Los equipos de desarrollo pueden concentrarse en escribir y perfeccionar el código una vez, en lugar de tener que abordar dos conjuntos distintos de código para las diferentes plataformas móviles. Esto reduce la carga de trabajo y acelera el tiempo de desarrollo, permitiendo que la aplicación llegue al mercado más rápidamente.
+La ventaja de este enfoque es la eficiencia del proceso de desarrollo. Los equipos de desarrollo pueden concentrarse en escribir y pulir el código al mismo tiempo en lugar de tener que lidiar con dos conjuntos de código diferentes para diferentes plataformas móviles. Esto reduce el esfuerzo y acelera el tiempo de desarrollo, lo que permite que las aplicaciones salgan al mercado más rápido. Ser capaz de usar una sola base de código en React Native también significa que no hay pérdida de funcionalidad o rendimiento.
 
-Además, la capacidad de utilizar una única base de código en React Native no implica ninguna pérdida de funcionalidad o rendimiento. Las aplicaciones desarrolladas con React Native tienen un rendimiento comparable al de las aplicaciones nativas, ya que el código se traduce en componentes nativos específicos de cada plataforma.
-
-En resumen, React Native ofrece una forma eficiente y productiva de desarrollar aplicaciones móviles multiplataforma. Al utilizar una única base de código, los equipos de desarrollo pueden ahorrar tiempo y esfuerzo, sin comprometer la calidad ni el rendimiento de la aplicación en diferentes plataformas móviles.
+Las aplicaciones desarrolladas con React Native tienen un rendimiento comparable al de las aplicaciones nativas porque el código se traduce en componentes nativos específicos de la plataforma. En resumen, React Native proporciona una forma eficiente y productiva de desarrollar aplicaciones móviles multiplataforma.
 
 ### NestJs
 
@@ -80,9 +77,11 @@ Esta separación de responsabilidades en capas facilita la reutilización y el m
 En resumen, la arquitectura hexagonal se basa en la separación de responsabilidades en una aplicación, y NestJs la implementa proporcionando una estructura modular. Esto promueve la reutilización, facilita el mantenimiento y permite adaptarse a cambios, haciendo que el desarrollo de aplicaciones backend sea más eficiente y flexible.
 
 ### Diagrama de Arquitectura
+
 ![DiagramaArquitectura](https://i.imgur.com/6CisAe9.jpeg)
 
 ### Diagrama de Clases
+
 ![DiagramaArquitectura](https://i.imgur.com/IPWvgkj.png)
 
 ### Resumen
@@ -90,16 +89,28 @@ En resumen, la arquitectura hexagonal se basa en la separación de responsabilid
 La combinación de React Native como frontend y NestJs como backend, junto con la arquitectura hexagonal, proporciona una base sólida para el desarrollo de Mobility. Permite una separación clara de responsabilidades, facilita la reutilización de componentes y módulos, y ofrece la flexibilidad necesaria para escalar la aplicación a medida que crece la demanda de usuarios y funcionalidades.
 
 En resumen, Mobility utiliza la potencia de React Native y NestJs con una arquitectura hexagonal para proporcionar una experiencia de desarrollo eficiente y escalable. Esto garantiza que la aplicación pueda adaptarse a futuras necesidades y crecer de manera sostenible, brindando a los usuarios una plataforma confiable y de alto rendimiento.
+
 ## Diseño
 
 ### Backend
 
-El backend, al utilizar el framework **NestJs**, nos permite aprovechar los beneficios de la **Programación Orientada a Objetos** (*POO*) y la **Inyección de Dependencias** (*ID*), lo cual favorece la modularidad, reutilización de código y la gestión eficiente de dependencias en nuestros proyectos.
+El backend, al utilizar el framework **NestJs**, nos permite aprovechar los beneficios de la **Programación Orientada a Objetos** (_POO_) y la **Inyección de Dependencias** (_ID_), lo cual favorece la modularidad, reutilización de código y la gestión eficiente de dependencias en nuestros proyectos.
 
 Adicionalmente, al utilizar **TypeScript**, contamos con un sistema de tipos robusto que nos ayuda a prevenir errores en tiempo de compilación y facilita el mantenimiento y refactorización del código. Esto nos permite crear aplicaciones escalables y de fácil mantenimiento, con una arquitectura bien definida y desacoplada.
 
 En resumen, la combinación del framework **NestJs** y **TypeScript** en el backend nos proporciona una base sólida para desarrollar aplicaciones de alta calidad, con un enfoque en la legibilidad, mantenibilidad y escalabilidad del código.
 
+#### Autenticación
+
+Para la autenticación se han utilizado tokens **JWT**. Este sistema funciona de la siguiente forma.
+
+El servidor almacena un secreto el cual utiliza para generar este token JWT. Una vez el usuario inicia sesión generamos un token JWT con un payload que guarde información no sensible del usuario para poder identificar ese token con ese usuario.
+
+Una vez tenemos el token, se lo pasamos al usuario el cual deberá almacenar para poder acceder a los endpoints.
+
+Una vez tiene el usuario almacenado el token y quiere acceder a un endpoint protegido, debemos pasar por la cabecera este token para que el servidor lo revise.
+
+Una vez el servidor recibe este token, verificará si es valido y no ha expirado y extraerá el payload del token para inyectar en la request la información del usuario.
 
 #### Buenas practicas
 
@@ -107,7 +118,7 @@ Para la protección de rutas, se ha utilizado **Passport**, que es un middleware
 
 Adicionalmente, se han protegido todas las rutas por defecto y se ha habilitado un decorador propio al que he llamado **@Public** que lo que hace es saltarse la autenticación y abrir ese endpoint al público.
 
-*Ejmplo de uso:*
+_Ejmplo de uso:_
 
 ```typescript
  @Public()
@@ -118,12 +129,12 @@ Adicionalmente, se han protegido todas las rutas por defecto y se ha habilitado 
    };
  }
 ```
----
 
+---
 
 Otro decorador propio muy util es **@UserRequired**, basicamente este decorador inyecta dentro de la request la información de usuario.
 
-*Ejmplo de uso:*
+_Ejmplo de uso:_
 
 ```typescript
 @UserRequired()
@@ -133,7 +144,7 @@ Otro decorador propio muy util es **@UserRequired**, basicamente este decorador 
  }
 ```
 
-*Sin este decorador habría que hacerlo de la siguiente manera:*
+_Sin este decorador habría que hacerlo de la siguiente manera:_
 
 ```typescript
 @Get('me')
@@ -152,7 +163,7 @@ De esta manera evitamos repetir código cada vez que necesitemos mas informació
 
 El decorador **@Roles** nos permite filtrar un endpoint para un role especifico o para varios roles.
 
-*Ejmplo de uso:*
+_Ejmplo de uso:_
 
 Con este ejemplo, solo permitimos a usuarios que son administradores acceder a obtener todos los usuarios.
 
@@ -189,11 +200,7 @@ export const useMenu = (anchor, items) => {
     <Menu
       style={styles.menu}
       visible={visible}
-      anchor={
-          <TouchableOpacity onPress={showMenu}>
-            {anchor}
-          </TouchableOpacity>
-    }
+      anchor={<TouchableOpacity onPress={showMenu}>{anchor}</TouchableOpacity>}
       onRequestClose={hideMenu}
     >
       {items.map((item, index) => {
@@ -222,23 +229,22 @@ export const useMenu = (anchor, items) => {
 Gracias a este hook propio se pueden hacer menús flotantes así de simple:
 
 ```javascript
- const Menu = useMenu(
-    <Icon name={"dots-horizontal"} size={24} color="#3f3f3f"></Icon>,
-    [
-      {
-        name: "Eliminar",
-        onPress: async () => await deletePost(id),
-      },
-    ]
-  );
+const Menu = useMenu(
+  <Icon name={'dots-horizontal'} size={24} color="#3f3f3f"></Icon>,
+  [
+    {
+      name: 'Eliminar',
+      onPress: async () => await deletePost(id),
+    },
+  ],
+);
 ```
 
 Este es un ejemplo de muchos custom hooks que hay a lo largo del proyeto.
 
 ## Puesta en producción
 
-*Versión de NodeJs recomendada: **v19.5.0***
-
+\*Versión de NodeJs recomendada: **v19.5.0\***
 
 ### Backend
 
@@ -273,6 +279,7 @@ Una vez instaladas las dependencias iniciaremos el servicio.
 ```bash
 npx expo start
 ```
+
 ## Conclusiones
 
 En resumen, Mobility es una aplicación móvil poderosa y versátil que simplifica la gestión del contenido fotográfico en viajes. Su enfoque en la eficiencia, la usabilidad y la escalabilidad la convierte en una herramienta valiosa tanto para profesores como para gestores de viajes. Con una arquitectura robusta y buenas prácticas de diseño, Mobility ofrece una experiencia confiable y de alto rendimiento para los usuarios.
@@ -280,4 +287,3 @@ En resumen, Mobility es una aplicación móvil poderosa y versátil que simplifi
 En cuanto a la arquitectura, Mobility utiliza React Native como framework de desarrollo para el frontend y NestJs como framework de desarrollo backend. La combinación de estas tecnologías, junto con la arquitectura hexagonal, proporciona una base sólida para el desarrollo de la aplicación. React Native permite crear aplicaciones móviles multiplataforma con una única base de código, mientras que NestJs implementa una arquitectura modular y escalable en el backend.
 
 El diseño de Mobility se centra en la utilización de buenas prácticas, lo que garantizan la seguridad y la eficiencia en el manejo de datos y la interacción con los usuarios.
-
